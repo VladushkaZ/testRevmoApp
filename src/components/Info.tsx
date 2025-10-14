@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Download } from "./icons/download";
 import { Shadow } from "./icons/shadow";
 import Link from "next/link";
+import Video from "./Video";
 
 const data = await fetch("https://revmo-api.netlify.app/api/main");
 const resp = await data.json();
@@ -71,11 +72,7 @@ export default function Info() {
           </Link>
         )}
       </div>
-      <div className={`${styles.white_block} ${styles.second}`}>
-        <video preload="auto" muted autoPlay className={styles.video}>
-          <source src={resp.videoUrl} type="video/mp4" />
-        </video>
-      </div>
+      <Video videoUrl={resp.videoUrl} />
       <div className={styles.third}>
         {resp.sidebar.watch_video.enabled && (
           <Link

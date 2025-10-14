@@ -13,7 +13,6 @@ interface Review {
 }
 
 export default function Review({ post }:{post:Review}) {
-  console.log("post", post)
   const [imgNotLoaded, setImgNotLoaded] = useState(false);
   return (
     <>
