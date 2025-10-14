@@ -1,5 +1,6 @@
 import styles from "../app/page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const data = await fetch("https://revmo-api.netlify.app/api/navigation");
 const resp = await data.json();
@@ -7,7 +8,7 @@ const resp = await data.json();
 export default function Logo() {
   return (
     <div className={styles.ctas}>
-      <a
+      <Link
         href={resp.logo.link}
         target="_blank"
         rel="noopener noreferrer"
@@ -21,7 +22,7 @@ export default function Logo() {
           height={36}
         />
         <b>{resp.logo.text}</b>
-      </a>
+      </Link>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import styles from "../app/page.module.css";
 import Image from "next/image";
 import { Download } from "./icons/download";
 import { Shadow } from "./icons/shadow";
+import Link from "next/link";
 
 const data = await fetch("https://revmo-api.netlify.app/api/main");
 const resp = await data.json();
@@ -11,9 +12,9 @@ export default function Info() {
     <main className={styles.main}>
       <div className={`${styles.white_block} ${styles.first}`}>
         {resp.buttons.apk.enabled && (
-          <a className={styles.link} href="/">
+          <Link className={styles.link} href="/">
             {resp.buttons.apk.label} <Download />
-          </a>
+          </Link>
         )}
         <div>
           <div className={styles.title}>{resp.title}</div>
@@ -24,7 +25,7 @@ export default function Info() {
         </div>
         <div className={styles.ctas}>
           {resp.buttons.ios.enabled && (
-            <a
+            <Link
               href="/"
               target="_blank"
               rel="noopener noreferrer"
@@ -41,10 +42,10 @@ export default function Info() {
               <div className={styles.logo_hover}>
                 <Download />
               </div>
-            </a>
+            </Link>
           )}
           {resp.buttons.android.enabled && (
-            <a
+            <Link
               href="/"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +62,7 @@ export default function Info() {
               <div className={styles.logo_hover}>
                 <Download />
               </div>
-            </a>
+            </Link>
           )}
         </div>
       </div>
@@ -72,13 +73,13 @@ export default function Info() {
       </div>
       <div className={styles.third}>
         {resp.sidebar.watch_video.enabled && (
-          <a
+          <Link
             className={`${styles.white_block} ${styles.small_first}`}
             href="/video"
           >
             <Image src="/video.svg" alt="video" width={48} height={48} />
             {resp.sidebar.watch_video.label}
-          </a>
+          </Link>
         )}
         {resp.sidebar.qr_code.enabled && (
           <div className={`${styles.white_block} ${styles.small_second}`}>

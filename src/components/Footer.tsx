@@ -2,6 +2,7 @@ import { Dzen } from "@/components/icons/dzen";
 import { Telegram } from "@/components/icons/telegram";
 import { Vk } from "@/components/icons/vk";
 import { VkVideo } from "@/components/icons/vkVideo";
+import Link from "next/link";
 import styles from "../app/page.module.css";
 import Logo from "./Logo";
 
@@ -14,40 +15,40 @@ export default function Footer() {
       <Logo />
       <div className={styles.flex}>
         {resp.socials.vk.enabled && (
-          <a
+          <Link
             href={resp.socials.vk.url}
             target={"_blank"}
             className={styles.circle}
           >
             <Vk />
-          </a>
+          </Link>
         )}
         {resp.socials.telegram.enabled && (
-          <a
+          <Link
             href={resp.socials.telegram.url}
             target={"_blank"}
             className={styles.circle}
           >
             <Telegram />
-          </a>
+          </Link>
         )}
         {resp.socials.dzen.enabled && (
-          <a
+          <Link
             href={resp.socials.dzen.url}
             target={"_blank"}
             className={styles.circle}
           >
             <Dzen />
-          </a>
+          </Link>
         )}
         {resp.socials.vkVideo.enabled && (
-          <a
+          <Link
             href={resp.socials.vkVideo.url}
             target={"_blank"}
             className={styles.circle}
           >
             <VkVideo />
-          </a>
+          </Link>
         )}
       </div>
     </footer>
