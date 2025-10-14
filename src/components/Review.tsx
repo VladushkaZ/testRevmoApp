@@ -6,13 +6,14 @@ import { useState } from "react";
 
 interface Review {
   id: number;
-  photo?: string;
-  name?: string;
-  date?: string;
+  photo: string;
+  name: string;
+  date: string;
   text: string;
 }
 
-export default function Review({ post }: any) {
+export default function Review({ post }:{post:Review}) {
+  console.log("post", post)
   const [imgNotLoaded, setImgNotLoaded] = useState(false);
   return (
     <>

@@ -3,9 +3,9 @@ import Review from "./Review";
 
 interface Review {
   id: number;
-  photo?: string;
-  name?: string;
-  date?: string;
+  photo: string;
+  name: string;
+  date: string;
   text: string;
 }
 
