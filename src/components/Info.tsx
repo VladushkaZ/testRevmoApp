@@ -65,6 +65,11 @@ export default function Info() {
             </Link>
           )}
         </div>
+        {resp.buttons.apk.enabled && (
+          <Link className={styles.link_mobile} href="/">
+            {resp.buttons.apk.label} <Download />
+          </Link>
+        )}
       </div>
       <div className={`${styles.white_block} ${styles.second}`}>
         <video preload="auto" muted autoPlay className={styles.video}>
@@ -83,8 +88,10 @@ export default function Info() {
         )}
         {resp.sidebar.qr_code.enabled && (
           <div className={`${styles.white_block} ${styles.small_second}`}>
-            <Image src="/qr.svg" alt="qr" width={48} height={48} />
-            Скачать<br></br> по QR коду
+            <div className={styles.flex_code}>
+              <Image src="/qr.svg" alt="qr" width={48} height={48} />
+              Скачать<br></br> по QR коду
+            </div>
             <div className={styles.img_wrap}>
               <Image
                 src={resp.sidebar.qr_code.url}
