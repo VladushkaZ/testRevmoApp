@@ -20,9 +20,7 @@ export default function Info() {
         <div>
           <div className={styles.title}>{resp.title}</div>
           <div className={styles.desc}>{resp.subtitle}</div>
-          <div className={styles.shadow}>
-            <Shadow />
-          </div>
+          
         </div>
         <div className={styles.ctas}>
           {resp.buttons.ios.enabled && (
