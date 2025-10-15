@@ -582,7 +582,7 @@
   }
 }
 
-@media screen and (max-width: 1360px) and (min-width: 940px) {
+@media screen and (max-width: 1360px) and (min-width: 940px) and (min-height: 600px) {
   .animation {
     display: none;
   }
