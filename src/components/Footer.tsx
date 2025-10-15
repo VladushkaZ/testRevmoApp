@@ -17,7 +17,6 @@ export default function Footer() {
         {resp.socials.vk.enabled && (
           <Link
             href={resp.socials.vk.url}
-            target={"_blank"}
             className={styles.circle}
           >
             <Vk />
@@ -26,7 +25,6 @@ export default function Footer() {
         {resp.socials.telegram.enabled && (
           <Link
             href={resp.socials.telegram.url}
-            target={"_blank"}
             className={styles.circle}
           >
             <Telegram />
@@ -35,7 +33,6 @@ export default function Footer() {
         {resp.socials.dzen.enabled && (
           <Link
             href={resp.socials.dzen.url}
-            target={"_blank"}
             className={styles.circle}
           >
             <Dzen />
@@ -44,7 +41,6 @@ export default function Footer() {
         {resp.socials.vkVideo.enabled && (
           <Link
             href={resp.socials.vkVideo.url}
-            target={"_blank"}
             className={styles.circle}
           >
             <VkVideo />

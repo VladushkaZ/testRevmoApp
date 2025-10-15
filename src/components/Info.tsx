@@ -26,8 +26,6 @@ export default function Info() {
           {resp.buttons.ios.enabled && (
             <Link
               href="/"
-              target="_blank"
-              rel="noopener noreferrer"
               className={styles.primary}
             >
               <Image
@@ -46,8 +44,6 @@ export default function Info() {
           {resp.buttons.android.enabled && (
             <Link
               href="/"
-              target="_blank"
-              rel="noopener noreferrer"
               className={styles.primary}
             >
               <Image

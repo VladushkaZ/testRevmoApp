@@ -19,8 +19,6 @@ export default function Header() {
           {respBtn.sidebar.download_app.enabled && (
             <Link
               href="/"
-              target="_blank"
-              rel="noopener noreferrer"
               className={`${styles.secondary} ${styles.gradient}`}
             >
               <div className={styles.primary_bg}>

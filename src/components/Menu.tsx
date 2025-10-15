@@ -31,8 +31,6 @@ export default function Menu({ options }: { options: Rout[] }) {
       <div className={`${styles.menu} ${menuOpen && styles.menu_open}`}>
         <Link
           href={options[0].link}
-          target="_blank"
-          rel="noopener noreferrer"
           className={styles.back}
         >
           <Arrow />
@@ -42,8 +40,6 @@ export default function Menu({ options }: { options: Rout[] }) {
           <Link
             key={rout.id}
             href={rout.link}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {rout.label}
           </Link>

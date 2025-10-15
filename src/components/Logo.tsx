@@ -10,8 +10,6 @@ export default function Logo() {
     <div className={styles.ctas}>
       <Link
         href={resp.logo.link}
-        target="_blank"
-        rel="noopener noreferrer"
         className={styles.secondary}
       >
         <Image
